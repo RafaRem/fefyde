@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fefyde';
+  text =''
+ public ss(){
+  this.text = 'Facebook'
+ }
+
+ ConsultaCalificacion(){
+    window.open("http://dse.uasnet.mx/alumnos/");
+}
 }

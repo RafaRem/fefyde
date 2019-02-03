@@ -1,0 +1,15 @@
+.navbar{
+    background: #AA8C0A !important;
+    
+}
+
+.navbar .collapse ul li:hover> a{
+    background: #052654;;
+    color: white;
+  
+  }
+
+.page-footer {
+    background: #AA8C0A;
+    color: black;
+}

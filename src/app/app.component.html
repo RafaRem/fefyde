@@ -1,20 +1,106 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+      <img src="/src/assets/FEFyDE.png" width="30" height="30" class="d-inline-block align-top" alt="">FEFyDE Los Mochis</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ss" >Servicio Social</a>
+       
+      </li>
+    
+      <li class="nav-item">
+          <a class="nav-link" href="Dir">Directorio</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Oferta Educativa
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="licef">Lic. En Educación Física</a>
+            <a class="dropdown-item" href="liced">Lic. En Educación Deportiva</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="programa">Programa educativo</a>
+          </div>
+        </li>  
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Acerca de...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="mensaje">Mensaje de bienvenida</a>
+          <a class="dropdown-item" href="historia">Historia</a>
+          <a class="dropdown-item" href="docentes">Docencentes</a>
+          <a class="dropdown-item" href="MyV">Misión, Visión y Valores</a>
+          <a class="dropdown-item" href="obj">Objetivo</a>
+          <a class="nav-link" href="Dir">Directorio</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ubi">Ubicación</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+  
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Soy Administrador</button>
+    </form>
+  </div>
+</nav>
+<div class="col-xs-12 col-sm-10 col-md-12 col-sm-offset-1 col-md-offset 2">
+
+<div class="row justify-content-md-center" >
+  <div class="col-md-2 d-none d-md-block d-xs-none"  style="background: #052654; width: 100%; color: white;"> <br><br>
+     <img src="/src/assets/Logotipo_UAS.png" class="d-inline-block align-top img-fluid" alt=""></div>
+  <div class="col-md-8"><div class="container-fluid">
+    <div><router-outlet ></router-outlet></div>
+  </div></div>
+  <div class="col-md-2 d-none d-md-block d-xs-none" style="background: #052654; color: white;">
+    <br>
+  <div > <button class="container-fluid" style="color: white; background: #052654" (click)="ConsultaCalificacion()">Consultar Calificaciones</button></div>
+  <br>
+  <div> <a href="requisitos" style="color: white;">Requisitos de Admisión</a></div>
+  <br>
+  <div> <a href="" style="color: white;">Ubicación</a></div></div>
+</div>
+</div>
+
+ 
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row justify-content-md-center">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5  ">
+        <div class="mb-5 ">
+
+          <!-- Facebook -->
+          <div class="text-center">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" (click)="ss()"><img src="../assets/fbb.png" style="width: 50px; height: 50px; " alt=""> </i>
+          </div>
+          <!-- Twitter -->
+          
+         
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    
+  </div>
+  <div class="footer-copyright text-center py-3" style="color: white;">Facultad de Educación Física y Deportes Extensión Los Mochis
+  
+  </div>
+</footer>
+<!-- Footer -->

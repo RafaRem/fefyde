@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { ServiciosocialComponent } from './serviciosocial/serviciosocial.component';
 import { DirectorioComponent } from './directorio/directorio.component';
@@ -15,12 +17,21 @@ import { EfComponent } from './oferta/ef/ef.component';
 import { EdComponent } from './oferta/ed/ed.component';
 import { ProgramaComponent } from './oferta/programa/programa.component';
 import { RequisitosComponent } from './oferta/requisitos/requisitos.component';
+import { LoginComponent } from './administrador/login/login.component';
+import { MenuComponent } from './administrador/menu/menu.component';
+import { DocentesAdmComponent } from './administrador/docentes-adm/docentes-adm.component';
+import { EventosAdmComponent } from './administrador/eventos-adm/eventos-adm.component';
+import { NoticiasAdmComponent } from './administrador/noticias-adm/noticias-adm.component';
+import { DepartamentosAdmComponent } from './administrador/departamentos-adm/departamentos-adm.component';
+import { OfertaAdmComponent } from './administrador/oferta-adm/oferta-adm.component';
 
 
 const routes: Routes= [
 
   {path: '', component: ServiciosocialComponent},
   {path: 'ss', component: ServiciosocialComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'menuadmin', component: MenuComponent},
   {path: 'licef', component: EfComponent},
   {path: 'liced', component: EdComponent},
   {path: 'programa', component: ProgramaComponent},
@@ -49,13 +60,21 @@ const routes: Routes= [
     EfComponent,
     EdComponent,
     ProgramaComponent,
-    RequisitosComponent
+    RequisitosComponent,
+    LoginComponent,
+    MenuComponent,
+    DocentesAdmComponent,
+    EventosAdmComponent,
+    NoticiasAdmComponent,
+    DepartamentosAdmComponent,
+    OfertaAdmComponent
   ],
   imports: [
     BrowserModule,
-    
-    RouterModule.forRoot(routes),
-    
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes), 
+    ReactiveFormsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

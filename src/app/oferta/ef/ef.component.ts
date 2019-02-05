@@ -8,12 +8,12 @@ import { OfertaeducativaService} from '../../servicios/ofertaeducativa.service'
 })
 export class EfComponent implements OnInit {
 
-  carreras : any;
+  efisica : any;
   titulo;
   constructor(private servicio: OfertaeducativaService) {
-    this.carreras = servicio.getCarreras();
-    console.log(this.carreras)
-    this.titulo = this.carreras.tipo;
+    this.efisica = servicio.getCarreras();
+    console.log(this.efisica)
+    this.titulo = this.efisica.tipo;
    }
 
   ngOnInit() {

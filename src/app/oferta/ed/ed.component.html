@@ -1,29 +1,21 @@
 <br>
-<h1>Licenciatura en Educación Deportiva <img src="../../../assets/FEFyDE.png" style="width: 10%; height: 10%;" class="rounded float-right" alt="..."></h1>
-<br>
-<!--Objetivo-->
-<h3>Objetivo</h3>
-<p ALIGN="justify">Formar profesionales de la educación deportiva con calidad académica, alto sentido ético y 
-  social, entrenar y formar deportistas de buen nivel de competencia a través de fundamentar la planificación del 
-  entrenamiento deportivo desde diversas posiciones teórico-metodológicas, entrenamientos deportivos en apego a 
-  necesidades reales y actuales de la competencia deportiva, además de formar y desarrollar técnicas modernas del 
-  entrenamiento.</p>
-<!--Perfil de egreso-->
-<div align="justify">
-  <h3>Perfil de Egreso</h3>
-  
-  <p>El Licenciado en Educación Deportiva, tendrá un alto nivel de conocimiento de la cultura física y el deporte con capacidad para impulsar y formar deportistas de alto nivel de competencia, que posean además, un gran espíritu humanista capaz de manejar elementos que se involucran en el proceso enseñanza-aprendizaje, así como la promoción, administración e instrumentación de la cultura física, el deporte y la recreación.</p>
-  
-  <p>La gama de conocimientos, habilidades y destrezas que los alumnos de la carrera desarrollen, les permitirá identificarse en el proceso técnico administrativo del ámbito del deporte en general, donde se podrán desempeñarse como:</p>
-  <ul>
-    <li>Entrenador</li>
-    <li>Administrador Deportivo</li>
-    <li>Coordinador Deportivo</li>
-    <li>Metodólogo</li>
-    <li>Director Técnico</li>
-    <li>Preparador Físico</li>
-  </ul>
-</div>
+<div *ngFor="let ress of edep"> 
+    <h1>{{ress.carrera}}  <img src="../../../assets/FEFyDE.png" style="width: 10%; height: 10%;" class="rounded float-right" alt="..."></h1>
+    <br>
+    <br>
+    <h3>Objetivo</h3>
+    <p ALIGN="justify">{{ress.obj}}</p>
+    <br>
+    <h3>Perfil de Egreso</h3>
+    <p ALIGN="justify">{{ress.perfe}}</p>
+    <br>
+    <br>
+    <h3>Perfil de Ingreso</h3>
+    <ul *ngFor="let per of ress.perfi">
+     <li>{{per}}</li>
+      </ul>
+    <br>
+  </div>
   
 <br>
 <!--Perfil de Ingreso-->

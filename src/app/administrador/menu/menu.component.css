@@ -1,0 +1,35 @@
+.btn-sq-lg {
+    background: #052654 !important;
+    width: 150px !important;
+    height: 150px !important;
+    padding:2px;
+    margin: 3px;
+  }
+  
+  .btn-sq {
+    background: #052654 !important;
+    width: 100px !important;
+    height: 100px !important;
+    font-size: 10px;
+    padding:2px;
+    margin: 3px;
+  }
+  
+  .btn-sq-sm {
+    background: #052654 !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 10px;
+    margin: 3px;
+  }
+  
+  .btn-sq-xs {
+    background: #052654 !important;
+    width: 25px !important;
+    height: 25px !important;
+    padding:2px;
+    margin: 3px;
+  }
+  .btn:hover{
+    background: #AA8C0A !important;
+}

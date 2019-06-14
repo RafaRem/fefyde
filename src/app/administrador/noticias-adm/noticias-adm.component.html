@@ -1,3 +1,37 @@
-<p>
-  noticias-adm works!
-</p>
+<br>
+
+<a href="menuadmin" class="btn btn-primary" (click)="regresar()" >
+  <img src="../../assets/back.png" alt="..." class="img-fluid" style="height: 25px; width: 25px;">
+</a>
+<br>
+
+<form [formGroup]="noticiaForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="titulo">Titulo de la Noticia*</label>
+    <i class="fa fa-check-circle check" *ngIf="noticiaForm.controls.titulo.valid"></i>
+    <i class="fa fa-exclamation-circle uncheck" *ngIf="noticiaForm.controls.titulo.invalid &&
+            noticiaForm.controls.titulo.touched"></i>
+    <input type="text" class="form-control" id="titulo"  placeholder="Titulo" formControlName="titulo">
+    
+    <p class="alert alert-danger" *ngIf="noticiaForm.controls.titulo.invalid &&
+            noticiaForm.controls.titulo.touched">
+            El campo Titulo es obligatorio</p>
+</div>
+<div class="form-group">
+  <label for="descripcion">Descripción de la Noticia</label>
+  <i class="fa fa-check-circle check" *ngIf="noticiaForm.controls.descripcion.valid"></i>
+  <i class="fa fa-exclamation-circle uncheck" *ngIf="noticiaForm.controls.descripcion.invalid &&
+          noticiaForm.controls.descripcion.touched"></i>
+  <textarea class="form-control" id="descripcion" formControlName="descripcion"></textarea>
+  <p class="alert alert-danger" *ngIf="noticiaForm.controls.descripcion.invalid &&
+          noticiaForm.controls.descripcion.touched">
+          Es obligatorio este campo</p>
+</div>
+          
+<button type="button" class="btn btn-primary" (click)="agregar()" [disabled]="!this.noticiaForm.valid">
+            Registrar Noticia
+</button>
+          
+</form>
+<br>

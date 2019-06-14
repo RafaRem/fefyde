@@ -24,12 +24,20 @@ import { EventosAdmComponent } from './administrador/eventos-adm/eventos-adm.com
 import { NoticiasAdmComponent } from './administrador/noticias-adm/noticias-adm.component';
 import { DepartamentosAdmComponent } from './administrador/departamentos-adm/departamentos-adm.component';
 import { OfertaAdmComponent } from './administrador/oferta-adm/oferta-adm.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { InicioComponent } from './inicio/inicio/inicio.component';
 
 const routes: Routes= [
 
-  {path: '', component: ServiciosocialComponent},
+  {path: '', component: InicioComponent},
   {path: 'ss', component: ServiciosocialComponent},
+  {path: 'adm/docentes', component: DocentesAdmComponent},
+  {path: 'adm/eventos', component: EventosAdmComponent},
+  {path: 'adm/noticias', component: NoticiasAdmComponent},
+  {path: 'adm/departamentos', component: DepartamentosAdmComponent},
+  {path: 'adm/ofertas', component: OfertaAdmComponent},
   {path: 'login', component: LoginComponent},
   {path: 'menuadmin', component: MenuComponent},
   {path: 'licef', component: EfComponent},
@@ -67,14 +75,18 @@ const routes: Routes= [
     EventosAdmComponent,
     NoticiasAdmComponent,
     DepartamentosAdmComponent,
-    OfertaAdmComponent
+    OfertaAdmComponent,
+    InicioComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes), 
-    ReactiveFormsModule, 
+    ReactiveFormsModule, BrowserAnimationsModule,
+    MatExpansionModule,
+    MatInputModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

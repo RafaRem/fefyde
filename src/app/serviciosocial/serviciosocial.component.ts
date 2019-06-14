@@ -12,4 +12,8 @@ export class ServiciosocialComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+  masinformacion(){
+    window.open("http://serviciosocial.uas.edu.mx/"); 
+  }
 }

@@ -1,3 +1,49 @@
-<p>
-  eventos-adm works!
-</p>
+<br>
+<a href="menuadmin" class="btn btn-primary" (click)="regresar()" >
+  <img src="../../assets/back.png" alt="..." class="img-fluid" style="height: 25px; width: 25px;">
+</a>
+
+<br>
+<br>
+
+<form [formGroup]="eventoForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+          <label for="titulo">Titulo del Evento*</label>
+          <i class="fa fa-check-circle check" *ngIf="eventoForm.controls.titulo.valid"></i>
+          <i class="fa fa-exclamation-circle uncheck" *ngIf="eventoForm.controls.titulo.invalid &&
+                  eventoForm.controls.titulo.touched"></i>
+          <input type="text" class="form-control" id="titulo"  placeholder="Titulo" formControlName="titulo">
+          
+          <p class="alert alert-danger" *ngIf="eventoForm.controls.titulo.invalid &&
+                  eventoForm.controls.titulo.touched">
+                  El campo Titulo es obligatorio</p>
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción del Evento</label>
+            <i class="fa fa-check-circle check" *ngIf="eventoForm.controls.descripcion.valid"></i>
+            <i class="fa fa-exclamation-circle uncheck" *ngIf="eventoForm.controls.descripcion.invalid &&
+                    eventoForm.controls.descripcion.touched"></i>
+            <textarea class="form-control" id="descripcion" formControlName="descripcion"></textarea>
+            <p class="alert alert-danger" *ngIf="eventoForm.controls.descripcion.invalid &&
+                    eventoForm.controls.descripcion.touched">
+                    Es obligatorio este campo</p>
+          </div>
+          <div class="form-group">
+            <label for="fechae">Fecha de inicio de laboración</label>
+            <i class="fa fa-check-circle check" *ngIf="eventoForm.controls.fechae.valid"></i>
+            <i class="fa fa-exclamation-circle uncheck" *ngIf="eventoForm.controls.fechae.invalid &&
+                    eventoForm.controls.fechae.touched"></i>
+            <input type="date" class="form-control" id="fechae"  placeholder="AA/MM/DD" formControlName="fechae">
+            
+            <p class="alert alert-danger" *ngIf="eventoForm.controls.fechae.invalid &&
+                    eventoForm.controls.fechae.touched">
+                    La fecha de inicio debe ser seleccionada</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" (click)="agregar()" [disabled]="!this.eventoForm.valid">
+            Registrar Evento
+          </button>
+          
+</form>
+<br>

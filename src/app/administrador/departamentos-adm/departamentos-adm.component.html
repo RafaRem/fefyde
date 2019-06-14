@@ -1,3 +1,83 @@
-<p>
-  departamentos-adm works!
-</p>
+<br>
+<a href="menuadmin" class="btn btn-primary" (click)="regresar()" >
+  <img src="../../assets/back.png" alt="..." class="img-fluid" style="height: 25px; width: 25px;">
+</a>
+<br>
+<br>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Agregar Personal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alta De Personal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="depForm" (ngSubmit)="onSubmit()">
+          
+          <div class="form-group">
+            <label for="departamento">Departamento*</label>
+            <i class="fa fa-check-circle check" *ngIf="depForm.controls.departamento.valid"></i>
+            <i class="fa fa-exclamation-circle uncheck" *ngIf="depForm.controls.departamento.invalid &&
+                    depForm.controls.departamento.touched"></i>
+            <input type="text" class="form-control" id="departamento"  placeholder="Departamento" formControlName="departamento">
+            
+            <p class="alert alert-danger" *ngIf="depForm.controls.departamento.invalid &&
+                    depForm.controls.departamento.touched">
+                    El campo departamento es obligatorio</p>
+            </div>
+          <div class="form-group">
+                  <label for="titulo">Titulo De La Persona*</label>
+                  <i class="fa fa-check-circle check" *ngIf="depForm.controls.titulo.valid"></i>
+                  <i class="fa fa-exclamation-circle uncheck" *ngIf="depForm.controls.titulo.invalid &&
+                          depForm.controls.titulo.touched"></i>
+                  <input type="text" class="form-control" id="titulo"  placeholder="Titulo" formControlName="titulo">
+                  
+                  <p class="alert alert-danger" *ngIf="depForm.controls.titulo.invalid &&
+                          depForm.controls.titulo.touched">
+                          El campo Titulo es obligatorio</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="encargado">encargado Completo*</label>
+                    <i class="fa fa-check-circle check" *ngIf="depForm.controls.encargado.valid"></i>
+                    <i class="fa fa-exclamation-circle uncheck" *ngIf="depForm.controls.encargado.invalid &&
+                            depForm.controls.encargado.touched"></i>
+                    <input type="text" class="form-control" id="encargado"  placeholder="encargado completo" formControlName="encargado">       
+                    <p class="alert alert-danger" *ngIf="depForm.controls.encargado.invalid &&
+                            depForm.controls.encargado.touched">
+                            Es obligatorio este campo</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="correo">Correo*</label>
+                    <i class="fa fa-check-circle check" *ngIf="depForm.controls.correo.valid"></i>
+                    <i class="fa fa-exclamation-circle uncheck" *ngIf="depForm.controls.correo.invalid &&
+                            depForm.controls.correo.touched"></i>
+                    <input type="text" class="form-control" id="correo"  placeholder="Ejemplo@fefyde.com" formControlName="correo">       
+                    <p class="alert alert-danger" *ngIf="depForm.controls.correo.invalid &&
+                            depForm.controls.correo.touched">
+                            Es obligatorio este campo</p>
+                  </div>
+        </form>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="agregar()" [disabled]="!this.depForm.valid">
+          Registrar Departamento
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="col-md-3">
+            
+  <img src="../../../assets/FEFyDE.png"class="img-fluid rounded-circle" alt="">
+  <input class="btn btn-primary" type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" (change)="SelectFile($event)" />
+</div>

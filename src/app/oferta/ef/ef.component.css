@@ -1,0 +1,12 @@
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.sobre{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

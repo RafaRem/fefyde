@@ -1,15 +1,40 @@
 .navbar{
-    background: #AA8C0A !important;
-    
+    background:#2B579A !important;
+    color: white !important;
 }
 
 .navbar .collapse ul li:hover> a{
-    background: #052654;;
+    background: #AA8C0A;
     color: white;
   
   }
+  .navbar .collapse ul li  a:hover{
+    background: #052654;
+    
+    color: white;
+  
+  }
+  .navbar .collapse{
+    background: #2B579A;
+    color: white;
+  
+  }
+  .navbar .collapse ul li  a{
+    background: #2B579A;
+    color: white;
+  
+  }
+ 
 
-.page-footer {
+.footer {
+    left:0 auto;
+    position: end;
+ 
     background: #AA8C0A;
-    color: black;
+    color: white;
+}
+
+.borde{
+    background: #052654;
+    border: #052654;
 }
